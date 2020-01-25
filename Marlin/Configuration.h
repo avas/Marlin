@@ -71,12 +71,7 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-<<<<<<< HEAD
 #define STRING_CONFIG_H_AUTHOR "(A.Vas, Tevo Tornado)" // Who made the changes.
-=======
-#define STRING_CONFIG_H_AUTHOR "(none, default config)" // Who made the changes.
-//#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
->>>>>>> marlin-origin/2.0.x
 
 /**
  * *** VENDORS PLEASE READ ***
