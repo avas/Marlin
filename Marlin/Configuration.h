@@ -1121,7 +1121,7 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 300 // Limited by HMG5 part cooling fans - they might hit diagonal frame braces on further travel
+#define X_BED_SIZE 310
 #define Y_BED_SIZE 300
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
