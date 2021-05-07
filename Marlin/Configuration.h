@@ -715,9 +715,9 @@
   #define DELTA_DIAGONAL_ROD 218.0        // (mm)
 
   // Distance between bed and nozzle Z home position
-  #define DELTA_HEIGHT 260.55             // (mm) Get this value from G33 auto calibrate
+  #define DELTA_HEIGHT 260.48             // (mm) Get this value from G33 auto calibrate
 
-  #define DELTA_ENDSTOP_ADJ { 0.00, -0.99, -1.30 } // Get these values from G33 auto calibrate
+  #define DELTA_ENDSTOP_ADJ { 0.00, -1.44, -1.26 } // Get these values from G33 auto calibrate
 
   // Horizontal distance bridged by diagonal push rods when effector is centered.
   #define DELTA_RADIUS 104.98             // (mm) Get this value from G33 auto calibrate
@@ -725,7 +725,7 @@
   // Trim adjustments for individual towers
   // tower angle corrections for X and Y tower / rotate XYZ so Z tower angle = 0
   // measured in degrees anticlockwise looking from above the printer
-  #define DELTA_TOWER_ANGLE_TRIM { -0.06, -0.29, 0.35 } // Get these values from G33 auto calibrate
+  #define DELTA_TOWER_ANGLE_TRIM { 0.00, -0.37, 0.36 } // Get these values from G33 auto calibrate
 
   // Delta radius and diagonal rod adjustments (mm)
   //#define DELTA_RADIUS_TRIM_TOWER { 0.0, 0.0, 0.0 }
@@ -874,7 +874,7 @@
 
 // delta speeds must be the same on xyz
 #define DEFAULT_XYZ_STEPS_PER_UNIT ((XYZ_FULL_STEPS_PER_ROTATION) * (XYZ_MICROSTEPS) / double(XYZ_BELT_PITCH) / double(XYZ_PULLEY_TEETH))
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { DEFAULT_XYZ_STEPS_PER_UNIT, DEFAULT_XYZ_STEPS_PER_UNIT, DEFAULT_XYZ_STEPS_PER_UNIT, 410 }  // default steps per unit for Kossel (GT2, 16 teeth) + E3D Titan (~410 steps/mm)
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { DEFAULT_XYZ_STEPS_PER_UNIT, DEFAULT_XYZ_STEPS_PER_UNIT, DEFAULT_XYZ_STEPS_PER_UNIT, 401.96 }  // default steps per unit for Kossel (GT2, 16 teeth) + E3D Titan (~410 steps/mm)
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1164,7 +1164,7 @@
 #define XY_PROBE_FEEDRATE (133*60)
 
 // Feedrate (mm/min) for the first approach when double-probing (MULTIPLE_PROBING == 2)
-#define Z_PROBE_FEEDRATE_FAST (4*60)
+#define Z_PROBE_FEEDRATE_FAST (50*60)
 
 // Feedrate (mm/min) for the "accurate" probe of each point
 #define Z_PROBE_FEEDRATE_SLOW (Z_PROBE_FEEDRATE_FAST / 2)
@@ -1222,7 +1222,7 @@
  * Example: `M851 Z-5` with a CLEARANCE of 4  =>  9mm from bed to nozzle.
  *     But: `M851 Z+1` with a CLEARANCE of 2  =>  2mm from bed to nozzle.
  */
-#define Z_CLEARANCE_DEPLOY_PROBE   50 // Z Clearance for Deploy/Stow
+#define Z_CLEARANCE_DEPLOY_PROBE   15 // Z Clearance for Deploy/Stow
 #define Z_CLEARANCE_BETWEEN_PROBES  5 // Z Clearance between probe points
 #define Z_CLEARANCE_MULTI_PROBE     5 // Z Clearance between multiple probes
 //#define Z_AFTER_PROBING           5 // Z position after probing is done
